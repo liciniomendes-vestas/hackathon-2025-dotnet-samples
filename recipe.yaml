@@ -1,0 +1,18 @@
+applications:
+  - name: psp-postgres
+    ports:
+      - name: postgres
+        port: 5432
+    containers:
+      - image: registry-pminds.ns-azweu-dev.vks.vestas.net/psp-postgres:0.0.1
+        name: postgres
+        volumes: 
+          - path: /var/lib/postgresql/data
+            name: postgres-volume
+            size: 2Gi
+            persistent: true
+            scope: workload
+  - name: psp-worker
+    containers:
+      - image: registry-pminds.ns-azweu-dev.vks.vestas.net/vestas-psp-poc-presentation-worker:0.0.4
+        name: worker

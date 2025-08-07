@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Presentation.Worker-a59cfb3d-d6a6-4bdb-bcfa-dce7ce25dd50</UserSecretsId>
+    <AssemblyName>Vestas.Psp-poc.Presentation.Worker</AssemblyName>
+    <RootNamespace>Vestas.Psp_poc.Presentation.Worker</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.7" />
+    <PackageReference Include="Npgsql" Version="9.0.3" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.12.0" />
+  </ItemGroup>
+</Project>
